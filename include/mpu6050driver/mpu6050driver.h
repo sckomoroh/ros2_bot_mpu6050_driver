@@ -6,16 +6,18 @@
 #include "sensor_msgs/msg/imu.hpp"
 
 class MPU6050Driver : public rclcpp::Node {
- public:
-  MPU6050Driver();
+public:
+    MPU6050Driver();
 
- private:
-  rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr publisher_;
-  std::unique_ptr<MPU6050Sensor> mpu6050_;
-  size_t count_;
-  rclcpp::TimerBase::SharedPtr timer_;
-  void handleInput();
-  void declareParameters();
+private:
+    rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr publisher_;
+    std::unique_ptr<MPU6050Sensor> mpu6050_;
+    size_t count_;
+    rclcpp::TimerBase::SharedPtr timer_;
+    std::string imu_topic_;
+    std::string imu_frame_;
+    void handleInput();
+    void declareParameters();
 };
 
 #endif  // MPU6050DRIVER_H

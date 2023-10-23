@@ -2,6 +2,7 @@
 #define MPU6050SENSOR_H
 
 #include <string>
+#include <array>
 #include <unordered_map>
 
 class MPU6050Sensor {
