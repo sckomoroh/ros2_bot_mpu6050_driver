@@ -14,6 +14,6 @@ mpu6050driver_node:
     accel_x_offset: 0.0 # [m/s²]
     accel_y_offset: 0.0 # [m/s²]
     accel_z_offset: 0.0 # [m/s²]
-    frequency: 100 # [Hz]
+    frequency: 50 # [Hz]
     topic: imu/data_raw
     frame: imu_link
