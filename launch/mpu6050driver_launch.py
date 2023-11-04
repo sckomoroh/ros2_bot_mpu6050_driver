@@ -9,7 +9,7 @@ import os
 
 def generate_launch_description():
     ld = LaunchDescription()
-    share_dir = get_package_share_directory('mpu6050driver')
+    share_dir = get_package_share_directory('mpu6050_driver_node')
     parameter_file = LaunchConfiguration('params_file')
 
     params_declare = DeclareLaunchArgument('params_file',
@@ -18,7 +18,7 @@ def generate_launch_description():
                                            description='Path to the ROS2 parameters file to use.')
 
     mpu6050driver_node = Node(
-        package='mpu6050driver',
+        package='mpu6050_driver_node',
         executable='mpu6050driver',
         name='mpu6050driver_node',
         output="screen",
